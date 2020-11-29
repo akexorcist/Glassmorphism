@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="GlassView">
+        <attr name="glassView_cornerRadius" format="dimension" />
+        <attr name="glassView_elevation" format="dimension" />
+        <attr name="glassView_surfaceOpacity" format="float" />
+        <attr name="glassView_borderOpacity" format="float" />
+        <attr name="glassView_shadowOpacity" format="float" />
+        <attr name="glassView_borderWidth" format="dimension" />
+        <attr name="glassView_blurAmount" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="GlassLayout">
+        <attr name="glassView_blurSampleSize" format="integer">
+            <enum name="full" value="1" />
+            <enum name="half" value="2" />
+        </attr>
+    </declare-styleable>
+</resources>
