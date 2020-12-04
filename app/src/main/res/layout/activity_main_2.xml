@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/layoutBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/shape_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textViewName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="32dp"
+                android:text="Sleeping For Less"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewDescription"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Android development website for Android developers"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@id/textViewName"
+                app:layout_constraintStart_toStartOf="@id/textViewName"
+                app:layout_constraintTop_toBottomOf="@id/textViewName" />
+
+            <Button
+                android:id="@+id/buttonEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Edit"
+                app:layout_constraintStart_toStartOf="@id/textViewDescription"
+                app:layout_constraintTop_toBottomOf="@id/textViewDescription" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+
+    <com.akexorcist.glassmorphism.Glass2Layout
+        android:id="@+id/glassLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:glassView_blurSampleSize="half">
+
+        <ImageView
+            android:id="@+id/imageViewBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutForeground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager2"
+                android:layout_width="0dp"
+                android:layout_height="240dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <!--            <ScrollView-->
+            <!--                android:id="@+id/scrollView"-->
+            <!--                android:layout_width="0dp"-->
+            <!--                android:layout_height="0dp"-->
+            <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                app:layout_constraintStart_toStartOf="parent"-->
+            <!--                app:layout_constraintTop_toBottomOf="@id/buttonEdit">-->
+
+            <!--                <LinearLayout-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:gravity="center_horizontal"-->
+            <!--                    android:orientation="vertical">-->
+
+            <!--                    <com.akexorcist.glassmorphism.Glass2View-->
+            <!--                        android:id="@+id/glassView1"-->
+            <!--                        android:layout_width="200dp"-->
+            <!--                        android:layout_height="120dp"-->
+            <!--                        android:layout_margin="16dp"-->
+            <!--                        app:glassView_blurAmount="20"-->
+            <!--                        app:glassView_cornerRadius="16dp"-->
+            <!--                        app:glassView_elevation="10dp">-->
+
+            <!--                        <TextView-->
+            <!--                            android:layout_width="wrap_content"-->
+            <!--                            android:layout_height="wrap_content"-->
+            <!--                            android:layout_gravity="center"-->
+            <!--                            android:text="1st Glass"-->
+            <!--                            android:textColor="@color/white"-->
+            <!--                            android:textSize="16sp" />-->
+            <!--                    </com.akexorcist.glassmorphism.Glass2View>-->
+
+            <!--                    <com.akexorcist.glassmorphism.Glass2View-->
+            <!--                        android:id="@+id/glassView2"-->
+            <!--                        android:layout_width="200dp"-->
+            <!--                        android:layout_height="120dp"-->
+            <!--                        android:layout_margin="16dp"-->
+            <!--                        android:elevation="10dp"-->
+            <!--                        app:glassView_blurAmount="10"-->
+            <!--                        app:glassView_cornerRadius="16dp"-->
+            <!--                        app:glassView_elevation="10dp"-->
+            <!--                        app:layout_constraintStart_toEndOf="@id/glassView1"-->
+            <!--                        app:layout_constraintTop_toTopOf="@id/glassView1">-->
+
+            <!--                        <TextView-->
+            <!--                            android:layout_width="wrap_content"-->
+            <!--                            android:layout_height="wrap_content"-->
+            <!--                            android:layout_gravity="center"-->
+            <!--                            android:text="2nd Glass"-->
+            <!--                            android:textColor="@color/white"-->
+            <!--                            android:textSize="16sp" />-->
+            <!--                    </com.akexorcist.glassmorphism.Glass2View>-->
+
+            <!--                    <com.akexorcist.glassmorphism.Glass2View-->
+            <!--                        android:id="@+id/glassView3"-->
+            <!--                        android:layout_width="200dp"-->
+            <!--                        android:layout_height="120dp"-->
+            <!--                        android:layout_margin="16dp"-->
+            <!--                        android:elevation="10dp"-->
+            <!--                        app:glassView_blurAmount="10"-->
+            <!--                        app:glassView_cornerRadius="16dp"-->
+            <!--                        app:glassView_elevation="10dp">-->
+
+            <!--                        <TextView-->
+            <!--                            android:layout_width="wrap_content"-->
+            <!--                            android:layout_height="wrap_content"-->
+            <!--                            android:layout_gravity="center"-->
+            <!--                            android:text="3rd Glass"-->
+            <!--                            android:textColor="@color/white"-->
+            <!--                            android:textSize="16sp" />-->
+            <!--                    </com.akexorcist.glassmorphism.Glass2View>-->
+
+            <!--                    <com.akexorcist.glassmorphism.Glass2View-->
+            <!--                        android:id="@+id/glassView4"-->
+            <!--                        android:layout_width="200dp"-->
+            <!--                        android:layout_height="120dp"-->
+            <!--                        android:layout_margin="16dp"-->
+            <!--                        android:elevation="10dp"-->
+            <!--                        app:glassView_blurAmount="10"-->
+            <!--                        app:glassView_cornerRadius="16dp"-->
+            <!--                        app:glassView_elevation="10dp"-->
+            <!--                        app:layout_constraintStart_toEndOf="@id/glassView1"-->
+            <!--                        app:layout_constraintTop_toTopOf="@id/glassView1">-->
+
+            <!--                        <TextView-->
+            <!--                            android:layout_width="wrap_content"-->
+            <!--                            android:layout_height="wrap_content"-->
+            <!--                            android:layout_gravity="center"-->
+            <!--                            android:text="Last Glass"-->
+            <!--                            android:textColor="@color/white"-->
+            <!--                            android:textSize="16sp" />-->
+            <!--                    </com.akexorcist.glassmorphism.Glass2View>-->
+            <!--                </LinearLayout>-->
+            <!--            </ScrollView>-->
+
+            <!--            <ImageView-->
+            <!--                android:id="@+id/imageViewPreview"-->
+            <!--                android:layout_width="250dp"-->
+            <!--                android:layout_height="150dp"-->
+            <!--                android:layout_margin="16dp"-->
+            <!--                android:background="#40FFFFFF"-->
+            <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                app:layout_constraintEnd_toEndOf="parent" />-->
+
+            <!--            <androidx.viewpager2.widget.ViewPager2-->
+            <!--                android:id="@+id/viewPager2"-->
+            <!--                android:layout_width="0dp"-->
+            <!--                android:layout_height="0dp"-->
+            <!--                android:layout_marginTop="32dp"-->
+            <!--                android:layout_marginBottom="32dp"-->
+            <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                app:layout_constraintStart_toStartOf="parent"-->
+            <!--                app:layout_constraintTop_toBottomOf="@id/buttonEdit" />-->
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.akexorcist.glassmorphism.Glass2Layout>
+
+    <ImageView
+        android:id="@+id/imageViewPreview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

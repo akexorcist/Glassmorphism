@@ -9,6 +9,15 @@
         <attr name="glassView_borderWidth" format="dimension" />
         <attr name="glassView_blurAmount" format="integer" />
     </declare-styleable>
+    <declare-styleable name="Glass2View">
+        <attr name="glass2View_cornerRadius" format="dimension" />
+        <attr name="glass2View_elevation" format="dimension" />
+        <attr name="glass2View_surfaceOpacity" format="float" />
+        <attr name="glass2View_borderOpacity" format="float" />
+        <attr name="glass2View_shadowOpacity" format="float" />
+        <attr name="glass2View_borderWidth" format="dimension" />
+        <attr name="glass2View_blurAmount" format="integer" />
+    </declare-styleable>
     <declare-styleable name="GlassLayout">
         <attr name="glassView_blurSampleSize" format="integer">
             <enum name="full" value="1" />
