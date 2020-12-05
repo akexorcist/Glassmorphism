@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.akexorcist.glassmorphism.GlassContainerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/glassContainerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:glassContainerLayout_blurAmount="normal"
+    app:glassContainerLayout_blurSampleSize="best">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/img_background" />
+
+    <com.akexorcist.glassmorphism.GlassBackgroundView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewProfile"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/view_post_info" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.akexorcist.glassmorphism.GlassContainerLayout>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.akexorcist.glassmorphism.GlassLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.akexorcist.glassmorphism.legacy.LegacyGlassLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/glassLayout"
@@ -11,10 +11,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.akexorcist.glassmorphism.GlassView
+        <com.akexorcist.glassmorphism.legacy.LegacyGlassView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:glassView_blurAmount="0">
+            app:legacyGlassView_blurAmount="0">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -52,6 +52,6 @@
                     tools:textColor="@color/black" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
-        </com.akexorcist.glassmorphism.GlassView>
+        </com.akexorcist.glassmorphism.legacy.LegacyGlassView>
     </FrameLayout>
-</com.akexorcist.glassmorphism.GlassLayout>
+</com.akexorcist.glassmorphism.legacy.LegacyGlassLayout>

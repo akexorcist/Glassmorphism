@@ -1,5 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <declare-styleable name="LegacyGlassView">
+        <attr name="legacyGlassView_cornerRadius" format="dimension" />
+        <attr name="legacyGlassView_elevation" format="dimension" />
+        <attr name="legacyGlassView_surfaceOpacity" format="float" />
+        <attr name="legacyGlassView_borderOpacity" format="float" />
+        <attr name="legacyGlassView_shadowOpacity" format="float" />
+        <attr name="legacyGlassView_borderWidth" format="dimension" />
+        <attr name="legacyGlassView_blurAmount" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="NewGlassView">
+        <attr name="newGlassView_cornerRadius" format="dimension" />
+        <attr name="newGlassView_elevation" format="dimension" />
+        <attr name="newGlassView_surfaceOpacity" format="float" />
+        <attr name="newGlassView_borderOpacity" format="float" />
+        <attr name="newGlassView_shadowOpacity" format="float" />
+        <attr name="newGlassView_borderWidth" format="dimension" />
+        <attr name="newGlassView_blurAmount" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="LegacyGlassLayout">
+        <attr name="legacyGlassLayout_blurSampleSize" format="integer">
+            <enum name="full" value="1" />
+            <enum name="half" value="2" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="GlassContainerLayout">
+        <attr name="glassContainerLayout_blurSampleSize" format="integer">
+            <enum name="best" value="4" />
+            <enum name="good" value="8" />
+            <enum name="poor" value="16" />
+        </attr>
+        <attr name="glassContainerLayout_blurAmount" format="integer">
+            <enum name="min" value="4" />
+            <enum name="low" value="6" />
+            <enum name="normal" value="8" />
+            <enum name="high" value="10" />
+            <enum name="max" value="12" />
+        </attr>
+    </declare-styleable>
     <declare-styleable name="GlassView">
         <attr name="glassView_cornerRadius" format="dimension" />
         <attr name="glassView_elevation" format="dimension" />
@@ -7,21 +45,5 @@
         <attr name="glassView_borderOpacity" format="float" />
         <attr name="glassView_shadowOpacity" format="float" />
         <attr name="glassView_borderWidth" format="dimension" />
-        <attr name="glassView_blurAmount" format="integer" />
-    </declare-styleable>
-    <declare-styleable name="Glass2View">
-        <attr name="glass2View_cornerRadius" format="dimension" />
-        <attr name="glass2View_elevation" format="dimension" />
-        <attr name="glass2View_surfaceOpacity" format="float" />
-        <attr name="glass2View_borderOpacity" format="float" />
-        <attr name="glass2View_shadowOpacity" format="float" />
-        <attr name="glass2View_borderWidth" format="dimension" />
-        <attr name="glass2View_blurAmount" format="integer" />
-    </declare-styleable>
-    <declare-styleable name="GlassLayout">
-        <attr name="glassView_blurSampleSize" format="integer">
-            <enum name="full" value="1" />
-            <enum name="half" value="2" />
-        </attr>
     </declare-styleable>
 </resources>

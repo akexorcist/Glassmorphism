@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.akexorcist.glassmorphism.GlassLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.akexorcist.glassmorphism.legacy.LegacyGlassLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/glassLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:glassView_blurSampleSize="half"
+    app:legacyGlassLayout_blurSampleSize="half"
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -43,16 +43,16 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="Edit"
-            app:layout_constraintStart_toStartOf="@id/textViewDescription"
-            app:layout_constraintTop_toBottomOf="@id/textViewDescription" />
+            app:layout_constraintStart_toStartOf="@id/textViewName"
+            app:layout_constraintTop_toBottomOf="@id/textViewName" />
 
-        <com.akexorcist.glassmorphism.GlassView
+        <com.akexorcist.glassmorphism.legacy.LegacyGlassView
             android:id="@+id/glassViewBottom"
             android:layout_width="250dp"
             android:layout_height="150dp"
-            app:glassView_blurAmount="20"
-            app:glassView_cornerRadius="16dp"
-            app:glassView_elevation="10dp"
+            app:legacyGlassView_blurAmount="20"
+            app:legacyGlassView_cornerRadius="16dp"
+            app:legacyGlassView_elevation="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -67,15 +67,15 @@
                 android:text="Bottom Glass"
                 android:textColor="@color/white"
                 android:textSize="16sp" />
-        </com.akexorcist.glassmorphism.GlassView>
+        </com.akexorcist.glassmorphism.legacy.LegacyGlassView>
 
-        <com.akexorcist.glassmorphism.GlassView
+        <com.akexorcist.glassmorphism.legacy.LegacyGlassView
             android:id="@+id/glassViewTop"
             android:layout_width="200dp"
             android:layout_height="150dp"
-            app:glassView_blurAmount="10"
-            app:glassView_cornerRadius="16dp"
-            app:glassView_elevation="20dp"
+            app:legacyGlassView_blurAmount="10"
+            app:legacyGlassView_cornerRadius="16dp"
+            app:legacyGlassView_elevation="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.4"
@@ -90,7 +90,7 @@
                 android:text="Top Glass"
                 android:textColor="@color/white"
                 android:textSize="16sp" />
-        </com.akexorcist.glassmorphism.GlassView>
+        </com.akexorcist.glassmorphism.legacy.LegacyGlassView>
 
         <ImageView
             android:id="@+id/imageViewPreview"
@@ -112,4 +112,4 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/buttonEdit" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-</com.akexorcist.glassmorphism.GlassLayout>
+</com.akexorcist.glassmorphism.legacy.LegacyGlassLayout>

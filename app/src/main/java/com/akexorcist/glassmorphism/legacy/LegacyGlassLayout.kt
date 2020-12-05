@@ -1,4 +1,4 @@
-package com.akexorcist.glassmorphism
+package com.akexorcist.glassmorphism.legacy
 
 import android.content.Context
 import android.graphics.Bitmap
@@ -10,7 +10,6 @@ import android.graphics.Paint
 import android.graphics.PorterDuff
 import android.graphics.PorterDuffXfermode
 import android.graphics.Rect
-import android.graphics.RectF
 import android.graphics.drawable.BitmapDrawable
 import android.os.Parcel
 import android.os.Parcelable
@@ -27,10 +26,10 @@ import androidx.core.graphics.applyCanvas
 import androidx.core.view.ViewCompat
 import androidx.core.view.children
 import androidx.customview.view.AbsSavedState
-import java.lang.RuntimeException
+import com.akexorcist.glassmorphism.R
 import kotlin.math.abs
 
-class GlassLayout : FrameLayout {
+class LegacyGlassLayout : FrameLayout {
     private lateinit var renderScript: RenderScript
     private val rootRect = Rect()
     private var blurSampleSize = 2f
@@ -87,8 +86,8 @@ class GlassLayout : FrameLayout {
     }
 
     private fun setupStyleable(context: Context, attrs: AttributeSet?) {
-        val typedArray = context.obtainStyledAttributes(attrs, R.styleable.GlassLayout)
-        this.blurSampleSize = typedArray.getFloat(R.styleable.GlassLayout_glassView_blurSampleSize, 2f)
+        val typedArray = context.obtainStyledAttributes(attrs, R.styleable.LegacyGlassLayout)
+        this.blurSampleSize = typedArray.getFloat(R.styleable.LegacyGlassLayout_legacyGlassLayout_blurSampleSize, 2f)
         typedArray.recycle()
     }
 
@@ -97,7 +96,7 @@ class GlassLayout : FrameLayout {
             getGlobalVisibleRect(rootRect)
             (getChildAt(0) as? ViewGroup)?.let { viewGroup ->
                 viewGroup.children.iterator().forEach { view ->
-                    if (view is GlassView) {
+                    if (view is LegacyGlassView) {
                         updateGlassView(view, viewGroup, rootRect)
                     }
                 }
@@ -141,7 +140,7 @@ class GlassLayout : FrameLayout {
         output.copyTo(bitmap)
     }
 
-    private fun updateGlassView(view: GlassView, rootView: ViewGroup, rootRect: Rect) {
+    private fun updateGlassView(view: LegacyGlassView, rootView: ViewGroup, rootRect: Rect) {
         val startTime = System.currentTimeMillis()
         val visibleRect = Rect()
         view.getGlobalVisibleRect(visibleRect)
